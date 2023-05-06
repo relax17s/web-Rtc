@@ -1,0 +1,359 @@
+.main__container {
+  margin-top: 74px;
+  height: clac(100vh - 74px);
+  width: 100%;
+  position: relative;
+}
+
+#room__container {
+  position: relative;
+  display: flex;
+  gap: 3rem;
+}
+
+.display__frame{
+  overflow: hidden;
+}
+
+#members__container {
+  background-color: #262625 !important;
+  border-right: 1px solid #797a79 !important;
+  overflow-y: auto !important;
+  width: 90% !important;
+  max-width: 250px !important;
+  position: fixed !important;
+  height: 100% !important;
+  z-index: 999 !important;
+}
+
+#members__count {
+  background-color: #1d1d1c !important;
+  padding: 7px 15px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border-radius: 5px !important;
+}
+
+#members__header {
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  padding: 0 1rem !important;
+  position: fixed !important;
+  font-size: 18px !important;
+  background-color: #323143 !important;
+  width: 218px !important;
+}
+
+#member__list {
+  all:unset;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+  padding-top: 5rem !important;
+  padding-bottom: 6.5rem;
+}
+
+.members__list::-webkit-scrollbar {
+  height: 14px !important;
+}
+
+#member__list .member__wrapper {
+  all: unset;
+  display: flex !important;
+  align-items: center !important;
+  column-gap: 10px !important;
+  padding-left: 1em !important;
+}
+
+.member__wrapper .green__icon {
+  display: block !important;
+  height: 8px !important;
+  width: 8px !important;
+  border-radius: 50% !important;
+  background-color: #2aca3e !important;
+}
+
+.member__wrapper .member_name{
+  font-size: 14px !important;
+  line-height: 0 !important;
+  display:none !important;
+}
+
+#messages__container {
+  height: calc(100vh - 85px) !important;
+  background-color: #262625 !important;
+  right: 0 !important;
+  position: absolute !important;
+  width: 100% !important;
+  max-width: 25rem !important;
+  overflow-y: auto !important;
+  border-left: 1px solid #111 !important;
+}
+
+#messages {
+  width: 100% !important;
+  height: 100% !important;
+  overflow-y: scroll !important;
+}
+
+.message__wrapper:last-child {
+  margin-bottom: 6.5rem !important;
+}
+
+.message__wrapper {
+  display: flex !important;
+  gap: 10px !important;
+  margin: 1em !important;
+}
+
+.message__body {
+  background-color: #363739 !important;
+  border-radius: 10px !important;
+  padding: 10px 15px !important;
+  width: fit-content !important;
+  max-width: 900px !important;
+}
+
+.message__body strong {
+  font-weight: 600 !important;
+  color: #ede0e0 !important;
+}
+
+.message__body__bot{
+  padding: 0 20px !important;
+  max-width: 900px !important;
+  color: #bdbdbd !important;
+}
+
+.message__author {
+  margin-right: 10px !important;
+  color: #2aca3e!important;
+
+}
+
+.message__author__bot {
+  margin-right: 10px !important;
+  color: #a52aca!important;
+
+}
+
+.message__text {
+  margin: 0 !important;
+}
+
+#message__form {
+  width: 23.2rem !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  display: block !important;
+  background-color: #1a1a1a !important;
+  padding: 1em !important;
+}
+
+#message__form input {
+  color: #fff !important;
+  width: 100% !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 18px !important;
+  font-size: 14px !important;
+  box-sizing: border-box !important;
+  background-color: #3f434a !important;
+}
+
+#message__form input:focus {
+  outline: none !important;
+}
+
+#message__form input::placeholder {
+  color: #707575 !important;
+}
+
+#stream__container {
+  justify-self: center;
+  width: calc(100% - 40.7rem);
+  position: fixed;
+  left: 15.7rem;
+  top: clac(100vh - 72px);
+  overflow-y: auto;
+  height: 100%;
+}
+
+#stream__box{
+  background-color: #3f434a;
+  height: 60vh;
+  display: none;
+}
+
+#stream__box .video__container{
+  border: 2px solid black;
+  border-radius: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#stream__box video{
+  border-radius: 0;
+}
+
+#members__button {
+  display: block;
+}
+
+#chat__button {
+  display: block;
+}
+
+#streams__container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 225px;
+  gap: 2em;
+}
+
+.video__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #b366f9;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  height: 300px;
+  width: 300px;
+}
+
+.video-player{
+  height: 100%;
+  width: 100%;
+}
+
+.video-player video{
+  border-radius: 50%;
+}
+
+@media (max-width: 1400px){
+  .video__container{
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #members__container {
+    display: none;
+  }
+  #members__button {
+    display: block;
+  }
+  #stream__container {
+    width: calc(100% - 25rem);
+    left: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  #stream__container {
+    width: calc(100% - 20rem);
+    left: 0;
+  }
+  #messages__container {
+    max-width: 20rem;
+  }
+
+  #message__form {
+    width: 18.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #stream__container {
+    width: 100%;
+  }
+
+  #messages__container {
+    display: none;
+  }
+
+  #chat__button {
+    display: block;
+  }
+  .video__container{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+#stream__box {
+  position: relative;
+}
+
+.stream__focus {
+  width: 100%;
+  height: 100%;
+}
+
+.stream__focus iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.stream__actions {
+  position: fixed;
+  bottom: 1rem;
+  border-radius: 8px;
+  background-color: #1a1a1a60;
+  padding: 1rem;
+  left: 50%;
+  display: none;
+  gap: 1rem;
+  transform: translateX(-50%);
+}
+
+.stream__actions a,
+.stream__actions button {
+  cursor: pointer;
+  background-color: #262625;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.stream__actions a svg,
+.stream__actions button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #ede0e0;
+}
+
+.stream__actions a.active,
+.stream__actions button.active,
+.stream__actions a:hover,
+.stream__actions button:hover {
+  background-color: #845695;
+}
+
+.join-btn{
+  background-color: #845695;
+  font-size: 18px;
+  padding: 25px 50px;
+  border: none;
+  color: #fff;
+  position: fixed;
+  bottom: 1rem;
+  border-radius: 8px;
+  left:50%;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+
+
